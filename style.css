@@ -1,0 +1,621 @@
+/*----------- content ---------------
+
+1. DEFAULT
+2. PRELOADER
+3. HEADER
+4. HOME
+5. ADVANTAGES
+6. BUY
+
+*/
+
+
+/*===============
+    1. DEFAULT
+=================*/
+
+@charset "UTF-8";
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #292e38;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #292e38;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #007bff;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    background-color: #181824;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+section {
+    height: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+span {
+    color: #007bff;
+}
+
+.container {
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+
+/*=================
+    2. PRELOADER
+===================*/
+
+/*===============
+    3. HEADER
+=================*/
+
+#header {
+    width: 100%;
+    position: fixed;
+    z-index: 1030;
+}
+
+.navbar {
+    padding-top: 20px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    line-height: 1;
+}
+
+.navbar-brand a span,
+.home-info span {
+    font-size: 45px;
+    display: inline-flex;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-top: 5px;
+}
+
+.navbar-nav a {
+    margin-right: 30px;
+}
+
+.navbar-nav a:last-child {
+    margin-right: 0px;
+}
+
+.navbar-nav a:hover {
+    color: #007bff;
+}
+
+
+.sticky_navigation {
+    background-color: #181824;
+    height: 90px;
+    -webkit-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+    -webkit-box-shadow: 0 3px 4.6px .3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 4.6px .3px rgba(0, 0, 0, 0.25)
+}
+
+/*===============
+    4. HOME
+=================*/
+
+#home {
+    z-index: 1030;
+}
+
+.bg-home {
+    position: relative;
+    background-image: url(../img/hero-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.bg-home::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(../img/overlay.png);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg-home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 123, 255, .8), rgba(0, 0, 0, .1));
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg-inner {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+.home-content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-info {
+    text-align: left;
+    width: 50%;
+}
+
+.home-info h1 {
+    font-size: 45px;
+    letter-spacing: 7px;
+}
+
+.home-info h1 span::before {
+    content: '[MADDOG PROJECT]';
+    position: absolute;
+    font-size: 10px;
+    letter-spacing: 6px;
+    line-height: 0px;
+}
+
+.home-info p {
+    letter-spacing: 1.4px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-transform: none;
+}
+
+.home-img {
+    max-width: 70%;
+}
+
+.buy-btn {
+    display: flex;
+}
+
+.brk-btn {
+    border: 1px solid #007bff;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 24px;
+    background-color: #007bff;
+    line-height: 48px;
+    min-width: 170px;
+    width: max-content;
+    padding: 0 15px;
+    transition: .35s;
+    margin-right: 30px;
+    box-shadow: 0 0 70px 0px rgba(0, 123, 255, .7);
+}
+
+.brk-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+.scroll__down {
+    position: absolute;
+    left: 50%;
+    margin-left: -12.5px;
+    width: 25px;
+    height: 40px;
+    bottom: 35px;
+    z-index: 2
+}
+
+.home-content .scroll__down svg {
+    width: 25px;
+    height: 40px
+}
+
+.scroll__down a {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -12px;
+    border-left: 2px solid #007bff;
+    border-bottom: 2px solid #007bff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+}
+
+/*==================
+    5. ADVANTAGES
+====================*/
+
+#advantages {
+    z-index: 1030;
+}
+
+.bg-advantages {
+    position: relative;
+    background-image: url(/img/bg-advantages.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.bg-advantages::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 123, 255, .5), rgba(0, 123, 255, .5));
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg-inner {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+
+.advantages-content {
+    padding-top: 150px;
+}
+
+.advantages-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advantages-item {
+    box-shadow: 0 0 30px 0px rgba(0, 123, 255, .2);
+    width: 32.33333%;
+    padding: 15px;
+    background-color: rgba(0, 123, 255, .4);
+    /*    background-color: rgba(0,0,0,.4);*/
+    border-radius: 10px;
+    /*    border: 1px solid #007bff;*/
+    border-bottom: 3px solid #007bff;
+    height: auto;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 20px;
+
+    /*    background-color: #007bff;*/
+}
+
+.advantages-item:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.advantages-item:nth-child(2) {
+    margin-right: 10;
+}
+
+.advantages-item:nth-child(6),
+.advantages-item:nth-child(3) {
+    margin-right: 0;
+}
+
+.advantages-item:nth-child(5),
+.advantages-item:nth-child(4) {
+    margin-bottom: 0;
+}
+
+.advantages-item h1 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.advantages-item .icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px 0px rgba(0, 123, 255, .9);
+    /*    box-shadow: 0 0 30px 0px rgba(0, 0, 0, .3);*/
+}
+
+.advantages-item svg {
+    font-size: 40px;
+}
+
+.advantages-item p {
+    text-align: left;
+}
+
+.content-title {
+    text-align: center;
+}
+
+.content-title h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px
+}
+
+.line {
+    height: 5px;
+    width: 100px;
+    display: inline-block;
+    border-radius: 10px;
+    background: #007bff;
+    margin-bottom: 40px;
+}
+
+/*==============
+    6. BUY
+================*/
+
+
+#buy {
+    z-index: 1030;
+}
+
+.bg-buy {
+    position: relative;
+    background-image: url(../img/bg-advantages.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.bg-buy::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 123, 255, .8), rgba(0, 123, 255, .5));
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.buy-content {
+    padding-top: 150px;
+}
+
+.buy-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.buy-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.buy-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32%;
+    min-height: 400px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+    border: 1px solid #007bff;
+    background-image: linear-gradient(to top, rgba(0, 123, 255, .6), rgba(0, 123, 390, .3));
+    margin-right: 10px;
+    /*box-shadow: 0 0 70px 0px rgba(253, 126, 20, .5);*/
+}
+
+.buy-item:last-child {
+    margin-right: 0;
+}
+
+.buy-item h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.buy-item .list-func p {
+    margin-bottom: 10px;
+}
+
+.list-func svg {
+    margin-right: 5px;
+}
+
+.buy-item .list-func p:last-child,
+.buy-item .list-func span:last-child {
+    margin-bottom: 0;
+}
+
+.buy-item h3 {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buy-item .btn--buy {
+    text-align: center;
+}
+
+.buy-item .btn--buy a {
+    background-color: #007bff;
+    padding: 10px 25px;
+    display: block;
+    color: #fff;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    box-shadow: 0 0 70px 0px rgba(0, 123, 255, .5);
+}
+
+/*===============
+    7. FOOTER
+=================*/
+
+#footer {
+    position: relative;
+    background-color: #0c0c0c;
+    padding: 25px;
+    z-index: 1030;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links a {
+    font-size: 23px;
+    padding: 20px;
+}
+
+.links a:last-child {
+    padding-right: 0;
+}
+
+.links a:nth-child(1):hover {
+    color: #4c75a3;
+}
+
+.links a:nth-child(2):hover {
+    color: #3b5998;
+}
+
+.links a:nth-child(3):hover {
+    color: #00acee;
+}
+
+.links a:nth-child(4):hover {
+    color: #0088cc;
+}
+
+.links a:nth-child(5):hover {
+    color: #f49c0f;
+}
+
+
+/*==================
+    8. ANIMATION
+====================*/
+
+@-webkit-keyframes sdb05 {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes sdb05 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
